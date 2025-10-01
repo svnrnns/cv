@@ -1,0 +1,19 @@
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+@utility flex-col-center {
+  @apply flex flex-col items-center justify-center;
+}
+
+@utility absolute-center {
+  @apply absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2;
+}
+
+@utility input-no-style {
+  @apply bg-transparent !p-0 outline-none placeholder:text-placeholder text-heading font-medium;
+}
+
+@utility font-medium-tight {
+  @apply font-medium tracking-tight;
+}

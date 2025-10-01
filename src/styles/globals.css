@@ -1,0 +1,22 @@
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body,
+  .__next {
+    @apply bg-body text-font !p-0;
+    scrollbar-width: thin;
+  }
+
+  /** Scrollbar **/
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-font/50 rounded;
+  }
+}
