@@ -17,3 +17,15 @@
 @utility font-medium-tight {
   @apply font-medium tracking-tight;
 }
+
+.transform-opacity-transform {
+  transition-property: transform, translate, scale, rotate, opacity;
+  transition-timing-function: var(
+    --tw-ease,
+    var(--default-transition-timing-function) /* cubic-bezier(0.4, 0, 0.2, 1) */
+  );
+  transition-duration: var(
+    --tw-duration,
+    var(--default-transition-duration) /* 150ms */
+  );
+}
