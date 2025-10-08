@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import '../styles/main.css';
 import { ThemeProvider } from 'next-themes';
 import { ThemeSwitchButton } from '@/components/theme-switch-button';
+import { JumpToTopButton } from '@/components/jump-to-top-button';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,7 +34,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider defaultTheme="system">
-          <div className="absolute right-6 bottom-6">
+          <div className="absolute right-6 bottom-6 flex items-center gap-3">
+            <JumpToTopButton />
             <ThemeSwitchButton />
           </div>
           {children}

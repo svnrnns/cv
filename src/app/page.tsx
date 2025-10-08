@@ -98,11 +98,6 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
-      <div className="p-2 bg-module">
-        <div className="p-2 bg-box">
-          <div className="size-10 bg-piece" />
-        </div>
-      </div>
     </div>
   );
 }
