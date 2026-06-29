@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CV — Portfolio de Miguel Montesinos
 
-## Getting Started
+Sitio web personal y currículum interactivo construido con [Next.js](https://nextjs.org) (App Router). Presenta la experiencia profesional en un timeline con soporte bilingüe (inglés y español), modo claro/oscuro y diseño responsive.
 
-First, run the development server:
+## Requisitos
+
+- [Node.js](https://nodejs.org) 20 o superior
+- npm (incluido con Node.js)
+
+## Instalación
+
+1. Clona el repositorio:
+
+```bash
+git clone <url-del-repositorio>
+cd cv
+```
+
+2. Instala las dependencias:
+
+```bash
+npm install
+```
+
+3. Arranca el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Abre [http://localhost:3000](http://localhost:3000) en el navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts disponibles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando         | Descripción                                    |
+| --------------- | ---------------------------------------------- |
+| `npm run dev`   | Servidor de desarrollo con recarga en caliente |
+| `npm run build` | Compila la aplicación para producción          |
+| `npm run start` | Sirve la build de producción                   |
+| `npm run lint`  | Ejecuta ESLint sobre el código                 |
 
-## Learn More
+## Tecnologías
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js 16** — framework React con App Router y Server Components
+- **React 19** — interfaz de usuario
+- **TypeScript** — tipado estático
+- **Tailwind CSS 4** — estilos utilitarios
+- **next-themes** — alternancia entre tema claro y oscuro
+- **lucide-react** — iconografía
+- **canvas-confetti** — efectos visuales
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Internacionalización
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+El proyecto incluye un sistema de i18n propio con dos idiomas:
 
-## Deploy on Vercel
+| Idioma  | Ruta  | Rol                          |
+| ------- | ----- | ---------------------------- |
+| Inglés  | `/`   | Idioma por defecto           |
+| Español | `/es` | Idioma con prefijo en la URL |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+La detección de idioma se basa en la cookie `locale`, el header `Accept-Language` y la ruta. El enrutamiento lo gestiona `src/proxy.ts`, que reescribe las peticiones y persiste la preferencia del usuario.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Las traducciones viven en `src/lib/i18n/translations/` (`en.json`, `es.json`). El contenido de cada puesto de trabajo se define en los JSON; las fechas y metadatos estructurales están en `src/features/cv/constants/cv-positions.ts`.
+
+## Estructura de ficheros
+
+```
+cv/
+├── public/                          # Assets estáticos servidos tal cual
+│
+├── src/
+│   ├── app/                         # App Router de Next.js
+│   │   ├── layout.tsx               # Layout raíz (fuentes, providers, controles fijos)
+│   │   ├── page.tsx                 # Página principal (metadata + CvPage)
+│   │   └── not-found.tsx            # Página 404
+│   │
+│   ├── components/                  # Componentes reutilizables de UI (botones, iconos, providers)
+│   │
+│   ├── features/
+│   │   └── cv/                      # Dominio del currículum (secciones, timeline, puestos, hooks)
+│   │
+│   ├── lib/
+│   │   ├── i18n/                    # Sistema de internacionalización (traducciones, routing, runtime)
+│   │   ├── ui/                      # Utilidades de interfaz (p. ej. composición de clases CSS)
+│   │   └── dates.ts                 # Formateo de fechas por locale
+│   │
+│   ├── styles/                      # Hojas de estilo globales
+│   │   ├── main.css                 # Punto de entrada de estilos
+│   │   ├── tailwind.css
+│   │   ├── globals.css
+│   │   └── animations.css
+│   │
+│   └── proxy.ts                     # Proxy de Next.js: enrutamiento i18n y cookies
+│
+├── next.config.ts                   # Configuración de Next.js
+├── tsconfig.json                    # TypeScript (alias `@/*` → `./src/*`)
+├── postcss.config.mjs               # PostCSS + Tailwind
+├── eslint.config.mjs                # Reglas de linting
+└── package.json
+```
+
+## Despliegue
+
+Para generar una build de producción:
+
+```bash
+npm run build
+npm run start
+```
+
+El proyecto está preparado para desplegarse en [Vercel](https://vercel.com) u otra plataforma compatible con Next.js.
