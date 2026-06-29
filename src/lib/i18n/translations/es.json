@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "title": "Miguel Montesinos • Portfolio",
+    "siteTitle": "Miguel Montesinos",
+    "description": "Miguel Montesinos portfolio"
+  },
+  "intro": {
+    "name": "Miguel Montesinos.",
+    "headline1": "Construyo software que no solo funciona, sino que resuena, diseñado para dejar huella.",
+    "headline2": "Especializado en aplicaciones con un fuerte enfoque en la calidad, trabajando con React y Vue para web y Kotlin y Swift para nativo.",
+    "copyEmail": "Copiar mi email"
+  },
+  "experience": {
+    "title": "Experiencia laboral"
+  },
+  "positions": {
+    "lion": {
+      "title": "Lion Capital Group",
+      "role": "Lead Frontend Developer",
+      "now": "Actualidad",
+      "content": {
+        "p1": "En Lion Capital Group lideré el diseño y desarrollo del CRM interno desde cero. La empresa ya operaba a gran escala, con cifras oficiales de 46,4 millones de euros en ventas, unas 160 operaciones cerradas y más de 660 propiedades en cartera, pero el día a día seguía repartido entre herramientas dispersas. Mi trabajo fue construir la plataforma central donde agentes, clientes, propiedades, operaciones y mapas de actividad pudieran trabajar juntos por fin.",
+        "p2": "Construí la base técnica y arquitectónica del proyecto con React, TypeScript, Vite, Redux y TailwindCSS, estableciendo desde el primer día estándares de calidad, escalabilidad y mantenibilidad. Esa base permitió evolucionar el producto con fluidez, incorporar nuevos desarrolladores sin fricción y mantener la dirección técnica del frontend a medida que crecía el equipo.",
+        "p3": "Centralizar todos los procesos operativos en una única aplicación redujo los tiempos de negociación en un 60-70% y dio al negocio un seguimiento mucho más claro a lo largo de todo el ciclo de clientes y operaciones. En ese camino trabajé en estrecha colaboración con el Lead Designer, el Lead Backend, la dirección del proyecto y el CEO en requisitos, decisiones de producto y validación de entregas. El resultado fue un CRM con una fiabilidad excepcional: una tasa de error por release inferior al 0,1% y un único bug detectado en producción desde su lanzamiento, corregido al momento."
+      }
+    },
+    "zeus": {
+      "title": "Zeus by LLYC",
+      "role": "Frontend Developer",
+      "now": "Actualidad",
+      "imageAlt": "Vista previa de la plataforma Zeus",
+      "content": {
+        "p1": "En Zeus by LLYC desarrollé el frontend de más de veinte proyectos para grandes empresas como Telefonica, Baleara y Sesame. Cada encargo llegaba con sus propios plazos, restricciones y nivel de exigencia, y mi trabajo consistía en traducir esas necesidades en interfaces pulidas con Vue y TailwindCSS, sin perder de vista la calidad ni la coherencia visual que estos clientes esperaban.",
+        "p2": "Con el tiempo pasé de ejecutar a liderar proyectos en frontend, coordinando equipo, tiempos y recursos para que las entregas llegaran antes de lo previsto y cumplieran con todos los estándares de QA. Esa dinámica, tuvo un efecto directo en la rentabilidad del departamento, que superó el 50%.",
+        "p3": "También diseñé herramientas internas que automatizaron procesos repetitivos del día a día del desarrollo. Simplificaron el trabajo del equipo, aumentaron la productividad entre un 20 y un 30%, y elevaron la calidad y la consistencia de lo que salía de la empresa."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© Miguel Montesinos"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe.",
+    "backHome": "Volver al inicio"
+  },
+  "locale": {
+    "en": "EN",
+    "es": "ES"
+  },
+  "a11y": {
+    "scrollToTop": "Volver arriba",
+    "toggleTheme": "Cambiar tema"
+  }
+}

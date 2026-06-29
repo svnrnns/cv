@@ -1,0 +1,101 @@
+* {
+  font-family: var(--font-inter), sans-serif;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  @apply bg-body !p-0 text-font;
+  scrollbar-width: thin;
+}
+
+h1 {
+  @apply text-1xl sm:text-2xl font-semibold text-heading;
+}
+
+p {
+  @apply text-xl sm:text-2xl font-light text-font;
+}
+
+.gigantic-text {
+  @apply text-1xl sm:text-2xl;
+}
+
+.massive-text {
+  @apply text-xl sm:text-1xl;
+}
+
+.huge-text {
+  @apply text-lg sm:text-xl;
+}
+
+.large-text {
+  @apply text-base sm:text-lg;
+}
+
+.medium-text {
+  @apply text-sm sm:text-base;
+}
+
+.small-text {
+  @apply text-xs md:text-sm;
+}
+
+.tiny-text {
+  @apply text-xxs lg:text-xs;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-font/50 rounded;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-col-center {
+  @apply flex flex-col items-center justify-center;
+}
+
+@layer utilities {
+  .page {
+    @apply max-w-[813px] mx-auto;
+  }
+
+  .page-block-raw {
+    @apply max-w-[558px];
+  }
+
+  .page-block-padding-children {
+    @apply max-w-[558px] sm:max-w-[590px];
+  }
+
+  .page-block-padding-children .child {
+    @apply sm:px-4;
+  }
+
+  .page-block-padding-children .child-full {
+    @apply sm:p-4;
+  }
+
+  .cv-timeline-icon-x {
+    left: calc(5.125rem + 1rem);
+  }
+}
+
+.text-btn {
+  @apply shadow rounded-lg py-3 px-4 font-semibold !leading-none cursor-pointer;
+}
+
+.icon-btn {
+  @apply shadow rounded-lg p-3 cursor-pointer;
+}
+
+.theme-icon-anim {
+  transform: rotate(360deg) scale(0);
+}
